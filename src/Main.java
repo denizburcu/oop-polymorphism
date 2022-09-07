@@ -60,7 +60,6 @@ class StarWars extends Movie {
 
     }
 }
-
 class Forgettable extends Movie {
 
     public Forgettable() {
