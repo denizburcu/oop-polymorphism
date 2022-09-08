@@ -45,12 +45,12 @@ class Mitsubishi extends Car {
 
     @Override
     public String accelerate() {
-        return "Car -> accelerate()";
+        return "Mistsubishi-> accelerate()";
     }
 
     @Override
     public String brake() {
-        return "Car -> brake()";
+        return "Mistsubishi -> brake()";
     }
 }
 
@@ -66,12 +66,33 @@ class Ford extends Car {
 
     @Override
     public String accelerate() {
-        return "Car -> accelerate()";
+        return "Ford -> accelerate()";
     }
 
     @Override
     public String brake() {
-        return "Car -> brake()";
+        return "Ford -> brake()";
+    }
+}
+
+ class Holden extends Car {
+    public Holden(int cylinders, String name) {
+        super(cylinders, name);
+    }
+
+    @Override
+    public String starEngine() {
+        return getClass().getSimpleName() +" -> startEngine()";
+    }
+
+    @Override
+    public String accelerate() {
+        return getClass().getSimpleName() +" -> accelerate()";
+    }
+
+    @Override
+    public String brake() {
+        return getClass().getSimpleName() + "-> brake()";
     }
 }
 
@@ -95,5 +116,10 @@ public class PolymorphismTest {
         System.out.println(ford.accelerate());
         System.out.println(ford.brake());
 
+       Holden holden = new Holden(6, "Holden Commodore");
+        System.out.println(holden.starEngine());
+        System.out.println(holden.accelerate());
+        System.out.println(holden.brake());
     }
+
 }
